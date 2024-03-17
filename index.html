@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+<div class="main" id="mainPage">
+    <h1>Приложение для рецептов</h1>
+    <div class="buttonPlace">
+        <button id="searchRecipeBtn">Поиск рецепта</button>
+        <button id="addRecipeBtn">Добавить рецепт</button>
+        <button id="menuPlanningBtn">Формирование меню</button>
+    </div>
+
+    <div id="searchRecipeForm" class="hidden">
+        <h1>Форма поиска меню</h1>
+
+        <form id="searchMenuForm">
+            <label for="searchMenuInput">Введите блюдо для поиска:</label>
+            <input type="text" id="searchMenuInput" placeholder="Например: салат, паста...">
+        </form>
+        <label for="menuList">Результаты поиска:</label>
+        <div id="menuList">
+        </div>
+    </div>
+
+    <div id="addRecipeForm" class="hidden">
+        <h1>Форма добавления рецепта</h1>
+
+        <form id="addRecipeFormChildren">
+            <label for="recipeName">Название рецепта:</label>
+            <input type="text" id="recipeName" required>
+
+            <label for="recipeIngredients">Ингредиенты:</label>
+            <textarea id="recipeIngredients" rows="4" required placeholder="запись в формате: <название блюда>: <кол-во> в грамм и шт (точная запись с указанием этих измерений), разделять запятыми"></textarea>
+
+            <label for="recipeDescription">Описание:</label>
+            <textarea id="recipeDescription" rows="6" required></textarea>
+
+            <button type="submit">Добавить рецепт</button>
+        </form>
+    </div>
+
+    <div id="menuPlanningForm" class="hidden">
+        <h1>Планирование меню</h1>
+
+        <form id="searchRecipeFormMenu">
+            <label for="searchRecipeInput">Найти рецепт:</label>
+            <input type="text" id="searchRecipeInput" placeholder="Введите блюдо">
+            <button id="searchRecipeBtnMenu">Найти</button>
+
+            <div id="recipeList"></div>
+        </form>
+
+        <div id="selectedRecipes">
+            <h2>Выбранные рецепты:</h2>
+            <ul id="selectedRecipesList"></ul>
+            <button id="generateListBtn" disabled>Сформировать список покупок</button>
+        </div>
+
+    </div>
+</div>
+
+<script type="module" src="app.js"></script>
+<script type="module" src="addRecipe.js"></script>
+<script type="module" src="searchRecipe.js"></script>
+<script type="module" src="createMenu.js"></script>
+<script type="module" src="addProductPage.js"></script>
+<script type="module" src="commonFunctions.js"></script>
+<script type="module" src="addMenuPage.js"></script>
+</body>
+</html>

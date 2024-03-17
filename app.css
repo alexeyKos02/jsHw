@@ -1,0 +1,171 @@
+.hidden {
+    display: none;
+}
+.active{
+    display: flex;
+}
+form {
+    max-width: 96%;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+li {
+    list-style-type: none;
+    /* Убираем маркеры */
+}
+
+ul {
+    margin-left: 0;
+    /* Отступ слева в браузере IE и Opera */
+    padding-left: 0;
+    /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+input, textarea {
+    width: 96%;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+#menuList{
+    display: flex;
+    flex-direction: column;
+}
+body{
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    height: 100vh; /* Полная высота видимой части экрана */
+    /*text-align: center;*/
+}
+.main{
+    padding: 10px 0 10px 17px;
+    height: 70%;
+    width: 25%;
+    background-color: grey;
+    border-radius: 10px;
+}
+.buttonPlace{
+}
+.addedMenuObj{
+    height: 30px;
+    position: relative;
+    margin-bottom: 3px;
+    border-radius: 5px;
+    max-width: 96%;
+    display: flex;
+    background-color: bisque;
+}
+.addedMenuObj >button{
+    background: transparent;
+    border: transparent;
+    position: absolute; /* Абсолютное позиционирование относительно ближайшего относительно позиционированного предка */
+    right: 0;
+    bottom: 20%;/* Сдвигаем кнопку к правой границе контейнера */
+}
+.addedMenuObj >li{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+#menuList{
+    overflow: scroll;
+    overflow-x: hidden;
+    max-height: 300px;
+}
+#recipeList{
+    border-radius: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+    max-height: 90px;
+}
+#recipeList >div{
+    cursor: pointer;
+    border-bottom: 3px solid black;
+}
+#recipeList >div{
+    padding-bottom: 5px;
+    padding-top: 5px;
+   padding-left: 10px;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+}
+
+
+.product {
+    position: relative;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 20px 20px 0;
+}
+
+.delete-btn {
+    position: absolute;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    bottom: 50px;
+    right: 0;
+}
+#goBackButton{
+    position: absolute;
+    top:0;
+    left: -30px;
+}
+.rating {
+    margin-top: 10px;
+    font-size: 20px;
+}
+.rating >span{
+    cursor: pointer;
+}
+
+.star {
+    color: #ffd700;
+}
+
+
+#notification {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    top: 20px;
+    right: 0;
+    transform: translateX(-50%);
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+#recipes, #ingredients{
+    width: 96%;
+    max-height: 20vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#recipes li, #ingredients li {
+    cursor: pointer;
+    margin: 5px 0;
+    background-color: #f4f4f4;
+    padding: 5px;
+}
+
+#recipes li:hover, #ingredients li:hover {
+    background-color: #ddd;
+}
+
+#ingredients li {
+    background-color: #eee;
+}
